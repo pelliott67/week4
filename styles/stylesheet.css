@@ -169,6 +169,7 @@ footer > img {
     margin: 0 5px 0 0; /*margin between images*/
 }
 
+/* I couldn't figure out how to make the scale up work in IE 11 (still a nice effect without it). Works in latest FF and Chrome. */
 .hovergallery img:hover{
     -webkit-transform:scale(1.1); /*Webkit: Scale up image to 1.2x original size*/
     -moz-transform:scale(1.1); /*Mozilla scale version*/
@@ -177,4 +178,28 @@ footer > img {
     -webkit-box-shadow:0px 0px 30px gray; /*Safari shadow version*/
     -moz-box-shadow:0px 0px 30px gray; /*Mozilla shadow version*/
     opacity: 1;
+}
+
+/************* Page 3 rotation demo *************/
+
+.contentarea {
+    width: 1200px;
+    padding-top: 60px;
+    margin-left: 30%;
+}
+
+p#socialicons img{ /* 1st set of icons. Rotate them 360deg onmouseover and out */
+-moz-transition: all 0.8s ease-in-out;
+-webkit-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+transition: all 0.8s ease-in-out;
+}
+
+p#socialicons img:hover{
+-moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+transform: rotate(360deg);
 }
